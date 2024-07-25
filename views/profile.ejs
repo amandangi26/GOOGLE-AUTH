@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .profile-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-header {
+            text-align: center;
+        }
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .profile-details {
+            margin-top: 20px;
+        }
+        .profile-details dt {
+            font-weight: bold;
+        }
+        .profile-details dd {
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img class="profile-image" src="<%=user.image%>" alt="Profile Picture" style="height: max-content;">
+            <h1><%= user.displayName %></h1>
+        </div>
+        <div class="profile-details">
+            <dl>
+                <dt>ID:</dt>
+                <dd><%= user._id %></dd>
+                <dt>Google ID:</dt>
+                <dd><%= user.googleId %></dd>
+                <dt>First Name:</dt>
+                <dd><%= user.firstName %></dd>
+                <dt>Email:</dt>
+                <dd><%= user.email %></dd>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>
